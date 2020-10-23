@@ -16,6 +16,7 @@ export const NavHeader = styled.div`
 export const NavLeft = styled.div`
   width: 33.333%;
   text-align:left;
+  font-weight:bold;
 `;
 
 export const NavCenter = styled.div`

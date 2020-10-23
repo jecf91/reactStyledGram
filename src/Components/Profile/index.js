@@ -13,28 +13,9 @@ import {
 
 import ImageCard from '../ImageCard';
 
-export default function Profile() {
+export default function Profile({ profilePhotos }) {
 
   const ProfilePic = "https://images.unsplash.com/photo-1544435253-f0ead49638fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
-
-  const MockData = [
-    {
-      id:1,
-      source: ProfilePic
-    },
-    {
-      id:2,
-      source: ProfilePic
-    },
-    {
-      id:3,
-      source: ProfilePic
-    },
-    {
-      id:4,
-      source: ProfilePic
-    }
-  ]
 
   return (
     <ProfileContainer>
@@ -57,9 +38,9 @@ export default function Profile() {
       </ProfileDetails>
 
       <ImageWrapper>
-        {MockData.map( data => (
-          <ImageCard photo={data} key={data.id} />
-        ))}
+      { !profilePhotos ?  ( <h1>Loading...</h1> ) : ( profilePhotos.map( photo => (
+          <ImageCard photo={photo} key={photo.id} />
+        )))  }
       </ImageWrapper>
 
     </ProfileContainer>

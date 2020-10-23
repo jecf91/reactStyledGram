@@ -6,6 +6,8 @@ export const ImageContainer = styled.div`
   margin: 5em;
   cursor: pointer;
   transition: 0.5 all ease-in;
+  max-width: 33%;
+  max-height: 400px;
 `;
 
 export const Img = styled.img`

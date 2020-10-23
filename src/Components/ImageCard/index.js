@@ -5,7 +5,7 @@ import { ImageContainer, Img } from './styles';
 export default function ImageCard({ photo }) {
   return (
     <ImageContainer>
-      <Img src={photo.source} alt="Photo"/>
+      <Img src={photo.urls.small} alt="Photo"/>
     </ImageContainer>
   )
 }

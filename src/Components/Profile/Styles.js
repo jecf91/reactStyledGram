@@ -55,4 +55,10 @@ export const ImageWrapper = styled.div`
   margin-top: 3em;
   display: flex;
   flex-wrap: wrap;
+  
+  @media(max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `

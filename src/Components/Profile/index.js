@@ -38,7 +38,7 @@ export default function Profile({ profilePhotos }) {
       </ProfileDetails>
 
       <ImageWrapper>
-      { !profilePhotos ?  ( <h1>Loading...</h1> ) : ( profilePhotos.map( photo => (
+      { !profilePhotos || profilePhotos.length === 0 ?  ( <h1>Loading...</h1> ) : ( profilePhotos.map( photo => (
           <ImageCard photo={photo} key={photo.id} />
         )))  }
       </ImageWrapper>
